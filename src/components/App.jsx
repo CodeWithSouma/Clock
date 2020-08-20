@@ -10,6 +10,7 @@ function App() {
     setTime(new Date().toLocaleTimeString());
   }
 
+  //store current state and update sate some time afer react autometically update change ui
 const [currentMessage,setMessage] = useState(getMessage(new Date().getHours()));
 
 function getMessage(curHr) {
