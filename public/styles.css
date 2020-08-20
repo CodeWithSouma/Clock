@@ -2,7 +2,7 @@ body {
   font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
   color: #fff;
   padding: 50px;
-  width: 300px;
+  width: 80%;
   margin: 0 auto;
   background-color: #374954;
   text-align: center;
@@ -13,7 +13,7 @@ h1 {
 }
 
 .container {
-  margin: 60% auto;
+  margin: 20% auto;
 }
 
 button {
