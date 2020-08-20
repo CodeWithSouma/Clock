@@ -10,13 +10,35 @@ function App() {
     setTime(new Date().toLocaleTimeString());
   }
 
-  // 
+const [currentMessage,setMessage] = useState(getMessage(new Date().getHours()));
+
+function getMessage(curHr) {
+  if (curHr < 12) {
+    return 'good morning';
+  } else if (curHr < 18) {
+    return 'good afternoon';
+  } else if (curHr < 21) {
+    return 'good evening';
+  } else {
+    return 'good night';
+  }
+}
+
+function updateMessage() {
+  setMessage(getMessage(new Date().getHours()));
+}
+
+
+  // update time every 1 second
   setInterval(updateTime,1000);
+  //every 1 minute refresh message 
+  setInterval(updateMessage,60000);
+  
 
   return (
     <div className="container">
       <h1>{currentTime}</h1>
-      <button onClick={updateTime}>Get Time</button>
+      <h2>{currentMessage}!</h2>
     </div>
   );
 }
